@@ -8,14 +8,28 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, XMLParserDelegate {
 
+    private var buildings: [Buildings]?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+     fetchData()
+    }
+    
+    
+    // Calls the feed parser class in the XMLParser.swift
+    private func fetchData(){
+        let feedParser = FeedParser()
+        feedParser.parseFeed(url: "ENTER JAMF URL /JSSResource/buildings") {
+            (buildings) in self.buildings = buildings
+            print(buildings)
+        }
     }
 
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
@@ -23,5 +37,11 @@ class ViewController: NSViewController {
     }
 
 
+        
+
 }
+
+
+
+
 

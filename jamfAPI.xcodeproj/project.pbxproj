@@ -11,6 +11,7 @@
 		7F628B0D21C954740023D94B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F628B0C21C954740023D94B /* ViewController.swift */; };
 		7F628B0F21C954760023D94B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F628B0E21C954760023D94B /* Assets.xcassets */; };
 		7F628B1221C954760023D94B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F628B1021C954760023D94B /* Main.storyboard */; };
+		7F628B1B21CABD410023D94B /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F628B1A21CABD410023D94B /* XMLParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7F628B1121C954760023D94B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F628B1321C954760023D94B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F628B1421C954760023D94B /* jamfAPI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = jamfAPI.entitlements; sourceTree = "<group>"; };
+		7F628B1A21CABD410023D94B /* XMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				7F628B0A21C954740023D94B /* AppDelegate.swift */,
 				7F628B0C21C954740023D94B /* ViewController.swift */,
+				7F628B1A21CABD410023D94B /* XMLParser.swift */,
 				7F628B0E21C954760023D94B /* Assets.xcassets */,
 				7F628B1021C954760023D94B /* Main.storyboard */,
 				7F628B1321C954760023D94B /* Info.plist */,
@@ -95,6 +98,11 @@
 				TargetAttributes = {
 					7F628B0621C954740023D94B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,6 +143,7 @@
 			files = (
 				7F628B0D21C954740023D94B /* ViewController.swift in Sources */,
 				7F628B0B21C954740023D94B /* AppDelegate.swift in Sources */,
+				7F628B1B21CABD410023D94B /* XMLParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
