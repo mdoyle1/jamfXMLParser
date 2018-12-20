@@ -44,8 +44,8 @@ class FeedParser: NSObject, XMLParserDelegate
         self.parserCompletionadler = completionHandler
         
         
-        let username = "ENTER USER NAME"
-        let password = "ENTER PASSWORD"
+        let username = ""
+        let password = ""
         
       
         var request = URLRequest(url: URL(string:url)!)
@@ -82,7 +82,7 @@ class FeedParser: NSObject, XMLParserDelegate
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         currentElement = elementName
-        if currentElement == "buildings" {
+        if currentElement == "building" {
             currentID = ""
             currentBuilding = ""
         }
@@ -99,7 +99,7 @@ class FeedParser: NSObject, XMLParserDelegate
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
-        if elementName == "buildings"{
+        if elementName == "building"{
             let inventory = Buildings(id: currentID, building: currentBuilding)
        self.buildings.append(inventory)
         }

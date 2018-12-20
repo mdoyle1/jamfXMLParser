@@ -23,9 +23,9 @@ class ViewController: NSViewController, XMLParserDelegate {
     // Calls the feed parser class in the XMLParser.swift
     private func fetchData(){
         let feedParser = FeedParser()
-        feedParser.parseFeed(url: "ENTER JAMF URL /JSSResource/buildings") {
+        feedParser.parseFeed(url: "/JSSResource/buildings") {
             (buildings) in self.buildings = buildings
-            print(buildings)
+            print(buildings[0])
         }
     }
 
